@@ -1,0 +1,13 @@
+.bar {
+    fill: skyblue;
+}
+
+.viz {
+    display: inline-block;
+}
+
+
+svg .seat.NLD { fill: blue }
+svg .seat.USDP { fill: green }
+svg .seat.others { fill: black }
+svg .seat.Military { fill: yellow }
