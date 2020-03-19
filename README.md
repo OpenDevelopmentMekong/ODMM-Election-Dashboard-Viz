@@ -8,3 +8,6 @@ You can change the language of the visualization by changing "var lang = 'EN'" i
 ## Embedding
 You can embedded this visualization using iFrame or copying and pasting indexing [index.html](./index.html) into you page. The
 JavaScript and CSS could be hot linked to this repository or pasted inline.
+
+## Preview 
+You can view this [dashboard in this page](https://opendevelopmentmekong.github.io/odmm-election-dashboard/)
