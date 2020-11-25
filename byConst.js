@@ -13,7 +13,7 @@ function buildDropdowns(){
     .enter()
     .append('option')
     .attr('value', function(d) { return d;})
-    .text(function(d) { return houseNameTranslate[d];});
+    .text(function(d) { return houseNameTranslate[d][lang];});
     
   dropdownDiv.append('select')
     .attr('class', 'state')
@@ -40,9 +40,11 @@ function buildDropdowns(){
     .text(function(d) { return d;});  
     
     d3.select("#tabLabel").text('');
-    d3.select("#tabLabel").append('h3').text(tabLabelTranslate[ddHouseSelect]);
-    
-    tabulate(constTable ,["name_st","const_code","const_name","candidate_name.my","party_name.en","votes.total_valid"]);
+    d3.select("#tabLabel").append('h3').text(houseNameTranslate[ddHouseSelect][lang]);
+  
+   // TODO : This needs to be localized, depends on the data. 
+  //  tabulate(constTable, conTable['table'][lang]); 
+    tabulate(constTable ,["name_st","const_code","const_name","candidate_name.en","party_name.en","votes.total_valid"]);
     for (var i = 0; i < constTable.length; i++) {
         piChartData [constTable[i]['party_name.en']] = constTable[i]['votes.total_valid'];
     }
@@ -68,7 +70,7 @@ function yearChange() {
         .enter()
         .append('option')
         .attr('value', function(d) { return d;})
-        .text(function(d) { return houseNameTranslate[d];});
+        .text(function(d) { return houseNameTranslate[d][lang];});
     houseUpdate();
 }
 //---------------------------------------------------------------
@@ -94,7 +96,7 @@ function houseUpdate() {
         .attr('value', function(d) { return d;})
         .text(function(d) { return d;}); 
     d3.select("#tabLabel").text('');
-    d3.select("#tabLabel").append('h3').text(tabLabelTranslate[ddHouseSelect]);
+    d3.select("#tabLabel").append('h3').text(houseNameTranslate[ddHouseSelect][lang]);
     stateUpdate();
 }
 //---------------------------------------------------------------
@@ -153,7 +155,9 @@ function constRender() {
     for (var i = 0; i <constLoc.length; i++) {
     constTable [i] = NewStateData[constLoc[i]];
 }
-    tabulate(constTable ,["name_st","const_code","const_name","candidate_name.my","party_name.en","votes.total_valid"]);
+      // TODO : This needs to be localized, depends on the data. 
+    //tabulate(constTable, conTable['table'][lang]); 
+    tabulate(constTable, ["name_st", "const_code", "const_name", "candidate_name.my", "party_name.en", "votes.total_valid"]);
     piChartData = {};
     for (var i = 0; i < constTable.length; i++) {
         piChartData [constTable[i]['party_name.en']] = constTable[i]['votes.total_valid'];
@@ -174,7 +178,7 @@ function tabulate(data, columns) {
 		  .append('th')
             .style('border','1px solid black')
             .append('b')
-		    .text(function (column) { return colNameTranslate[column]; });
+		    .text(function (column) { return colNameTranslate[column][lang]; });
 
 		// create a row for each object in the data
 		var rows = tbody.selectAll('tr')

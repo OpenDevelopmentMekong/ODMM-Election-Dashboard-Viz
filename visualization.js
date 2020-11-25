@@ -4,7 +4,7 @@ function visualize() {
     d3.select('#Viz').style('width','100%').style('overflow','auto');
     d3.select('#barC').text('');
     var barChart = d3.select("#barC");
-    barChart.append('h3').text('Top 10 parties by number of candidates');
+    barChart.append('h3').text(text['top_10'][lang]);
     var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 400 - margin.left - margin.right,
     height = 200 - margin.top - margin.bottom;
@@ -52,7 +52,7 @@ function visualize() {
         .attr("text-anchor","end")
         .attr("x", width/2)
         .attr("y", height+ 30)
-        .text("Parties")
+        .text(text['parties'][lang])
 
 
     svg.append("text")
@@ -62,7 +62,7 @@ function visualize() {
         .attr("text-anchor","end")
         .attr("x", -50)
         .attr("y", -30)
-        .text("Candidates")
+        .text(text['candidates'][lang])
     //append('div').style('float','right').style('margin-right','10%')
       /*
       .attr("y", 0 - margin.left)
@@ -75,7 +75,7 @@ function visualize() {
     //Parliamentry Chart
     d3.select('#parC').text('');
     var parChart = d3.select("#parC");
-    parChart.append('h3').text('Positions in parliament');
+    parChart.append('h3').text(text['positions_in_parliament'][lang]);
     var parli = parChart.append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -100,8 +100,8 @@ function visualize() {
     legd.append('circle').attr('cx',90).attr('cy',40).attr('r',5).attr('fill','green');
     legd.append('circle').attr('cx',90).attr('cy',60).attr('r',5).attr('fill','black');
     legd.append('circle').attr('cx',90).attr('cy',80).attr('r',5).attr('fill','yellow');
-    legd.append('text').attr('x',25).attr('y',25).text('NLD');
-     legd.append('text').attr('x',25).attr('y',45).text('USDP');
-     legd.append('text').attr('x',25).attr('y',65).text('Others');
-     legd.append('text').attr('x',25).attr('y',85).text('Military');
+    legd.append('text').attr('x',25).attr('y',25).text(text['NLD'][lang]);
+    legd.append('text').attr('x',25).attr('y',45).text('USDP');
+    legd.append('text').attr('x',25).attr('y',65).text(text['others'][lang]);
+    legd.append('text').attr('x',25).attr('y',85).text('Military');
 };

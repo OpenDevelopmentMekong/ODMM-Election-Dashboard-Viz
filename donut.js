@@ -9,7 +9,7 @@ var radius = Math.min(width, height) / 2 - margin
 
 // append the svg object to the div called 'my_dataviz'
 d3.select('#donut').text('');
-    d3.select('#donut').append('h3').text('Proportion of total votes by parties')
+    d3.select('#donut').append('h3').text(text['proportion'][lang])
 var svg = d3.select("#donut")
   .append("svg")
     .attr("width", width)
