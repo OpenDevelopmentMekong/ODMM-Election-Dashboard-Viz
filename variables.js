@@ -5,9 +5,10 @@ var text = {
     The data is available for download under a Creative Commons license. The user
     is welcome to explore the data using our dashboard.`,
 
-        'MM': `ယခုတွေ့ရှိရသော အင်တာနက်စာမျက်နှာသည် ဖန်တီးရာ တက်ခ်ဖော်ချိန်းအဖွဲ့မှ စုစည်းထားသော
-    မြန်မာနိုင်ငံ၏ ပထမဦးဆုံး ပြည့်ဝစုံလင်သော ရွေးကောက်ပွဲရလဒ်ဒေတာများကို မိတ်ဆက်ဖော်ပြသော
-    စာမျက်နှာဖြစ်ပါသည်။`
+        'MM': `ယခုတွေ့ရှိရသော အင်တာနက်စာမျက်နှာသည် ဖန်တီးရာ တက်ခ်ဖော်ချိန်းအဖွဲ့မှ စုစည်းထားသည့်
+    မြန်မာနိုင်ငံ၏ ပထမဦးဆုံး ပြည့်ဝစုံလင်သော ရွေးကောက်ပွဲရလဒ်ဒေတာများကို မိတ်ဆက်ဖော်ပြသည့်
+    စာမျက်နှာဖြစ်ပါသည်။ Creative Commons လိုင်စင်အရ အချက်အလက်များကို ဒေါင်းလုပ် လုပ်နိုင်ပါသည်။ 
+    ကျွန်ုပ်တို့၏ dashboard ကို အသုံးပြု၍ အချက်အလက်များကို ရှာဖွေလေ့လာရန် ကြိုဆိုပါသည်။`
     },
     'download': {
         'EN': 'Download',
@@ -15,7 +16,7 @@ var text = {
     },
     'general_election': {
         'EN': 'General election :',
-        'MM': 'အထွွေထွေရွေးကောက်ပွဲ :'
+        'MM': 'အထွေထွေရွေးကောက်ပွဲ :'
     },
     'by_election': {
         'EN': 'By-election :',
@@ -27,7 +28,7 @@ var text = {
     },
     'positions_in_parliament': {
         'EN': 'Positions in parliament',
-        'MM': 'ပါလီမန်၌ရာထူး'
+        'MM': 'လွှတ်တော်၌ရာထူး'
     },
     'NLD': {
         'EN': 'NLD',
@@ -39,11 +40,11 @@ var text = {
     },
     'top_10': {
         'EN': 'Top 10 parties by number of candidates',
-        'MM': 'ကိုယ်စားလှယ်လောင်းအရေအတွက်အားဖြင့်ထိပ်တန်းပါတီများ 10'
+        'MM': 'ကိုယ်စားလှယ်လောင်းအရေအတွက်အားဖြင့် ထိပ်တန်းပါတီ ၁၀ ခု'
     },
     'parties': {
         'EN': 'Parties',
-        'MM': 'ပါတီတွေက'
+        'MM': 'ပါတီများ'
     },
     'candidates': {
         'EN': 'Candidates',
@@ -51,7 +52,7 @@ var text = {
     },
     'proportion': {
         'EN': 'Proportion of total votes by parties',
-        'MM': 'ပါတီများစုစုပေါင်းဆန္ဒမဲ၏အချိုးအစား'
+        'MM': 'ပါတီအလိုက် စုစုပေါင်းဆန္ဒမဲ၏ အချိုးအစား'
     },
     'held_on': {
         'EN': 'Held on',
@@ -59,7 +60,7 @@ var text = {
     },
     'available_seats': {
         'EN': 'Available seats',
-        'MM' : 'ရရှိနိုင်ထိုင်ခုံ'
+        'MM' : 'ရရှိနိုင်သောနေရာ'
     },
     'president': {
         'EN': 'President',
@@ -71,7 +72,7 @@ var text = {
 var houseNameTranslate = {
     'amyotha': {
         'EN': 'Amyotha',
-        'MM': 'အမျိုးသားလွှတ်တ'
+        'MM': 'အမျိုးသားလွှတ်တော်'
     },
     'pyithu': {
         'EN': 'Pyithu',
@@ -80,7 +81,7 @@ var houseNameTranslate = {
     },
     'sr': {
         'EN': 'State/Region',
-        'MM': 'တိုင်းဒေသကြီးလွှတ်တော်'
+        'MM': 'ပြည်နယ်/တိုင်းဒေသကြီးလွှတ်တော်'
     }
  };
 
@@ -108,11 +109,11 @@ var colNameTranslate = {
     },
     'party_name.en': {
         'EN': 'Party name',
-        'MM': 'ပါတီနာမည်'
+        'MM': 'ပါတီအမည်'
     },
     'votes.total_valid': {
         'EN': 'Total votes',
-        'MM': 'စုစုပေါင်းမဲ'
+        'MM': 'စုစုပေါင်းဆန္ဒမဲ'
     }
 };
 
@@ -229,7 +230,7 @@ var consts = [...new Set(NewStateData.map(x => x.const_name))];
 //var tabLabelTranslate = {
 //'amyotha' :'အမျိုးသားလွှတ်တော်',
 //'pyithu': 'ပြည်သူ့လွှတ်တော်',
-//'sr' : 'တိုင်းဒေသကြီးလွှတ်တော်'
+//'sr' : 'ပြည်နယ်/တိုင်းဒေသကြီးလွှတ်တော်'
 //};
 
 
